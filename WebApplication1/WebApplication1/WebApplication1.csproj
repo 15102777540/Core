@@ -18,8 +18,4 @@
     <ProjectReference Include="..\Library.Model\Library.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\Views\" />
-  </ItemGroup>
-
 </Project>

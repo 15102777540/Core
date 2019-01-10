@@ -688,11 +688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ASPNETCore\\WebApplication1\\Library.Model\\Library.Model.csproj",
+      "projectUniqueName": "E:\\ASPNETCore\\Core\\WebApplication1\\Library.Model\\Library.Model.csproj",
       "projectName": "Library.Model",
-      "projectPath": "E:\\ASPNETCore\\WebApplication1\\Library.Model\\Library.Model.csproj",
+      "projectPath": "E:\\ASPNETCore\\Core\\WebApplication1\\Library.Model\\Library.Model.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\ASPNETCore\\WebApplication1\\Library.Model\\obj\\",
+      "outputPath": "E:\\ASPNETCore\\Core\\WebApplication1\\Library.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

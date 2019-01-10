@@ -7,3 +7,12 @@ E:\ASPNETCore\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Mo
 E:\ASPNETCore\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.AssemblyInfo.cs
 E:\ASPNETCore\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.dll
 E:\ASPNETCore\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.pdb
+E:\ASPNETCore\Core\WebApplication1\Library.Model\bin\Release\netcoreapp2.1\Library.Model.deps.json
+E:\ASPNETCore\Core\WebApplication1\Library.Model\bin\Release\netcoreapp2.1\Library.Model.dll
+E:\ASPNETCore\Core\WebApplication1\Library.Model\bin\Release\netcoreapp2.1\Library.Model.pdb
+E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.csprojAssemblyReference.cache
+E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.csproj.CoreCompileInputs.cache
+E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.AssemblyInfoInputs.cache
+E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.AssemblyInfo.cs
+E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.dll
+E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Release\netcoreapp2.1\Library.Model.pdb

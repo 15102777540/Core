@@ -18,11 +18,9 @@ namespace WebApplication1.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpGet]
-        public List<SearchOutput> UserSearch(SearchInput input,string c)
-        {
+        public List<SearchOutput> UserSearch(SearchInput input, string c) =>
             //逻辑暂空，这里主要看生成的输入输出
-            return null;
-        }
+            null;
 
         /// <summary>
         /// 查询用户
@@ -30,10 +28,10 @@ namespace WebApplication1.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpGet]
-        public string GetA(string a)
+        public SearchInput GetA([FromQuery]SearchInput input)
         {
             //逻辑暂空，这里主要看生成的输入输出            
-            return "321";
+            return input;
         }
     }
 }

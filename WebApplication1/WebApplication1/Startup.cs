@@ -66,6 +66,11 @@ namespace WebApplication1
                 app.UseHsts();
             }
 
+            /*DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            defaultFilesOptions.DefaultFileNames.Add("Index.html");
+            app.UseDefaultFiles(defaultFilesOptions);    */        
+
             app.UseHttpsRedirection();
             app.UseMvc();
 

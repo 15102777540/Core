@@ -11,7 +11,7 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:WebApplication1.Controllers.HomeController.GetA(System.String)">
+        <member name="M:WebApplication1.Controllers.HomeController.GetA(Library.Model.SearchInput)">
             <summary>
             查询用户
             </summary>

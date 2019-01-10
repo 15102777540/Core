@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication1</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication1.Controllers.HomeController.UserSearch(Library.Model.SearchInput,System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplication1.Controllers.HomeController.GetA(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplication1.AddAuthTokenHeaderParameter">
+            <summary>
+            添加Token参数
+            </summary>
+        </member>
+        <member name="M:WebApplication1.AddAuthTokenHeaderParameter.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            非匿名方法添加Token参数
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

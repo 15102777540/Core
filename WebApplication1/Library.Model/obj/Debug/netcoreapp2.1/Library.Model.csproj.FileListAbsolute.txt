@@ -17,4 +17,3 @@ E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Debug\netcoreapp2.1\Library
 E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Debug\netcoreapp2.1\Library.Model.AssemblyInfo.cs
 E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Debug\netcoreapp2.1\Library.Model.dll
 E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Debug\netcoreapp2.1\Library.Model.pdb
-E:\ASPNETCore\Core\WebApplication1\Library.Model\obj\Debug\netcoreapp2.1\Library.Model.csprojAssemblyReference.cache

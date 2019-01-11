@@ -1,0 +1,9 @@
+E:\ASPNETCore\Core\WebApplication1\Library.Common\bin\Debug\netcoreapp2.1\Library.Common.deps.json
+E:\ASPNETCore\Core\WebApplication1\Library.Common\bin\Debug\netcoreapp2.1\Library.Common.dll
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.csproj.CoreCompileInputs.cache
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.AssemblyInfoInputs.cache
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.AssemblyInfo.cs
+E:\ASPNETCore\Core\WebApplication1\Library.Common\bin\Debug\netcoreapp2.1\Library.Common.pdb
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.dll
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.pdb
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.csprojAssemblyReference.cache

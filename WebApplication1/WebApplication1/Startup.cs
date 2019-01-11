@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Library.Common;
+using WebApplication1.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -20,13 +22,13 @@ namespace WebApplication1
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            AppConfigurtaionServices.Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -50,7 +52,11 @@ namespace WebApplication1
                 options.IncludeXmlComments(xmlPath, true);
                 options.OperationFilter<AddAuthTokenHeaderParameter>();
 
-            });
+            });            
+            services.AddOptions();
+            services.Configure<AppSettingsModel>(this.Configuration.GetSection("AppSettings"));
+            services.AddOptions();
+            services.Configure<ApplicationConfiguration>(this.Configuration.GetSection("ApplicationConfiguration"));
 
         }
 
@@ -72,8 +78,15 @@ namespace WebApplication1
             app.UseDefaultFiles(defaultFilesOptions);    */        
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseMvc();
 
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=GetAz}/{id?}");
+            });
+           
             app.UseStaticFiles();//启用默认文件夹wwwroot
             app.UseSwagger();
             app.UseSwaggerUI(action =>

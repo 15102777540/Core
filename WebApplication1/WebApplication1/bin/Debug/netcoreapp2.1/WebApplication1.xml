@@ -18,6 +18,12 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:WebApplication1.Controllers.HomeController.GetProductList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:WebApplication1.AddAuthTokenHeaderParameter">
             <summary>
             添加Token参数

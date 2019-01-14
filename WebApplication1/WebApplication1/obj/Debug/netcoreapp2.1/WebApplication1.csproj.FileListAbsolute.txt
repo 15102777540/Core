@@ -38,3 +38,4 @@ E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebAp
 E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb
 E:\ASPNETCore\Core\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\Library.Common.dll
 E:\ASPNETCore\Core\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\Library.Common.pdb
+E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

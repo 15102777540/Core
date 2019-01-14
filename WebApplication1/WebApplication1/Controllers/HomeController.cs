@@ -9,6 +9,8 @@ using WebApplication1.Models;
 using Library.Common;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WebApplication1.Controllers
 {
@@ -18,7 +20,7 @@ namespace WebApplication1.Controllers
     {
         private readonly IOptions<AppSettingsModel> _setting;
         private readonly IOptions<ApplicationConfiguration> _ApplicationConfiguration;
-        public HomeController(IOptions<AppSettingsModel> setting,IOptions<ApplicationConfiguration> ApplicationConfiguration)
+        public HomeController(IOptions<AppSettingsModel> setting, IOptions<ApplicationConfiguration> ApplicationConfiguration)
         {
             _setting = setting;
             _ApplicationConfiguration = ApplicationConfiguration;
@@ -57,6 +59,22 @@ namespace WebApplication1.Controllers
             }
 
             return model;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public DataTable GetProductList()
+        {
+            var sql = "select * from SmartPig_products";
+            SqlParameter[] parm = {
+
+            };
+            DataTable dt = SqlHelper.GetTable(CommandType.Text, sql, parm);
+            //DataTable dt = dtConnection[0];
+            return dt;
         }
     }
 }

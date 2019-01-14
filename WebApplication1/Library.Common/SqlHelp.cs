@@ -92,6 +92,7 @@ namespace Library.Common
         }
 
         #endregion
+
         #region//GetTable方法
 
         /// <summary>
@@ -103,7 +104,7 @@ namespace Library.Common
         /// <param name="cmdText">存储过程的名字或者 T-SQL 语句</param>
         /// <param name="commandParameters">以数组形式提供SqlCommand命令中用到的参数列表</param>
         /// <returns>返回一个表集合(DataTableCollection)表示查询得到的数据集</returns>
-        public static DataTableCollection GetTable(string connecttionString, CommandType cmdTye, string cmdText, SqlParameter[] commandParameters)
+        public static DataTable GetTable(string connecttionString, CommandType cmdTye, string cmdText, SqlParameter[] commandParameters)
         {
             SqlCommand cmd = new SqlCommand();
             DataSet ds = new DataSet();
@@ -114,7 +115,7 @@ namespace Library.Common
                 adapter.SelectCommand = cmd;
                 adapter.Fill(ds);
             }
-            DataTableCollection table = ds.Tables;
+            DataTable table = ds.Tables[0];
             return table;
         }
 
@@ -126,7 +127,7 @@ namespace Library.Common
         /// <param name="cmdText">存储过程的名字或者 T-SQL 语句</param>
         /// <param name="commandParameters">以数组形式提供SqlCommand命令中用到的参数列表</param>
         /// <returns>返回一个表集合(DataTableCollection)表示查询得到的数据集</returns>
-        public static DataTableCollection GetTable(CommandType cmdTye, string cmdText, SqlParameter[] commandParameters)
+        public static DataTable GetTable(CommandType cmdTye, string cmdText, SqlParameter[] commandParameters)
         {
             return GetTable(connectionString, cmdTye, cmdText, commandParameters);
         }
@@ -138,7 +139,7 @@ namespace Library.Common
         /// <param name="cmdText">存储过程的名字或者 T-SQL 语句</param>
         /// <param name="commandParameters">以数组形式提供SqlCommand命令中用到的参数列表</param>
         /// <returns>返回一个表集合(DataTableCollection)表示查询得到的数据集</returns>
-        public static DataTableCollection GetTableProducts(string cmdText, SqlParameter[] commandParameters)
+        public static DataTable GetTableProducts(string cmdText, SqlParameter[] commandParameters)
         {
             return GetTable(CommandType.StoredProcedure, cmdText, commandParameters);
         }
@@ -149,7 +150,7 @@ namespace Library.Common
         /// <param name="cmdText"> T-SQL 语句</param>
         /// <param name="commandParameters">以数组形式提供SqlCommand命令中用到的参数列表</param>
         /// <returns>返回一个表集合(DataTableCollection)表示查询得到的数据集</returns>
-        public static DataTableCollection GetTableText(string cmdText, SqlParameter[] commandParameters)
+        public static DataTable GetTableText(string cmdText, SqlParameter[] commandParameters)
         {
             return GetTable(CommandType.Text, cmdText, commandParameters);
         }

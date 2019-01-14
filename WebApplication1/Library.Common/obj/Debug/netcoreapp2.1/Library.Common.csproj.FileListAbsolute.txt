@@ -6,3 +6,4 @@ E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Librar
 E:\ASPNETCore\Core\WebApplication1\Library.Common\bin\Debug\netcoreapp2.1\Library.Common.pdb
 E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.dll
 E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.pdb
+E:\ASPNETCore\Core\WebApplication1\Library.Common\obj\Debug\netcoreapp2.1\Library.Common.csprojAssemblyReference.cache

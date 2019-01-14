@@ -32,3 +32,5 @@ E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\Web
 E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\WebApplication1.csproj.CopyComplete
 E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\WebApplication1.dll
 E:\ASPNETCore\Core\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\WebApplication1.pdb
+E:\ASPNETCore\Core\WebApplication1\WebApplication1\bin\Release\netcoreapp2.1\Library.Common.dll
+E:\ASPNETCore\Core\WebApplication1\WebApplication1\bin\Release\netcoreapp2.1\Library.Common.pdb

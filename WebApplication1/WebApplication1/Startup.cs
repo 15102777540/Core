@@ -17,6 +17,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.Extensions.FileProviders;
 
 namespace WebApplication1
 {
@@ -80,14 +81,22 @@ namespace WebApplication1
             app.UseHttpsRedirection();
             //app.UseMvc();
 
+            //注册路由api地址
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=GetAz}/{id?}");
             });
-           
-            app.UseStaticFiles();//启用默认文件夹wwwroot
+
+            //注册路由core页面地址
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                //配置除了默认的wwwroot文件中的静态文件以外的文件夹  提供 Web 根目录外的文件  经过此配置以后，就可以访问Views文件下的文件
+                FileProvider = new PhysicalFileProvider(
+                  Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Views")),
+                RequestPath = "/Views",
+            }); //启用默认文件夹wwwroot
             app.UseSwagger();
             app.UseSwaggerUI(action =>
             {

@@ -47,11 +47,11 @@ namespace WebApplication1
                 var basePath = AppContext.BaseDirectory;
                 var xmlPath = Path.Combine(basePath, "WebApplication1.xml");
                 var xmlPathByModel = Path.Combine(basePath, "Library.Model.xml");
-                options.IncludeXmlComments(xmlPathByModel);
+                /*options.IncludeXmlComments(xmlPathByModel);
                 //true表示生成控制器描述，包含true的IncludeXmlComments重载应放在最后，或者两句都使用true
                 options.IncludeXmlComments(xmlPath, true);
                 options.IncludeXmlComments(xmlPath, true);
-                options.OperationFilter<AddAuthTokenHeaderParameter>();
+                options.OperationFilter<AddAuthTokenHeaderParameter>();*/
 
             });            
             services.AddOptions();
@@ -89,14 +89,16 @@ namespace WebApplication1
                     template: "{controller=Home}/{action=GetAz}/{id?}");
             });
 
-            //注册路由core页面地址
+            //注册路由core页面地址 
+            //启用默认文件夹wwwroot
             app.UseStaticFiles(new StaticFileOptions
             {
                 //配置除了默认的wwwroot文件中的静态文件以外的文件夹  提供 Web 根目录外的文件  经过此配置以后，就可以访问Views文件下的文件
                 FileProvider = new PhysicalFileProvider(
                   Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Views")),
                 RequestPath = "/Views",
-            }); //启用默认文件夹wwwroot
+            });
+            //启用Swagger调试api
             app.UseSwagger();
             app.UseSwaggerUI(action =>
             {

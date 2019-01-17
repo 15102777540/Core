@@ -18,7 +18,7 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:WebApplication1.Controllers.HomeController.GetProductList">
+        <member name="M:WebApplication1.Controllers.HomeController.GetProductList(System.Int32,System.Int32,System.String)">
             <summary>
             
             </summary>

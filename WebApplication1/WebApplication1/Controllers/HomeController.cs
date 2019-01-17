@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace WebApplication1.Controllers
 {
@@ -66,15 +67,16 @@ namespace WebApplication1.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public DataTable GetProductList()
-        {
-            var sql = "select * from SmartPig_products";
+        public string GetProductList(int pageIndex,int pageSize, string callback)
+        {           
+            var sql = string.Format(@"select top {0} * from(select  ROW_NUMBER() OVER (ORDER BY pid desc) AS RowNumber,* from SmartPig_products)t
+where t.RowNumber >{1}", pageSize, (pageIndex - 1) * pageSize);
             SqlParameter[] parm = {
 
             };
             DataTable dt = SqlHelper.GetTable(CommandType.Text, sql, parm);
             //DataTable dt = dtConnection[0];
-            return dt;
+            return callback+"(" + JsonConvert.SerializeObject(dt) + ")";
         }
     }
 }

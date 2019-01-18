@@ -59,6 +59,8 @@ namespace WebApplication1
             services.AddOptions();
             services.Configure<ApplicationConfiguration>(this.Configuration.GetSection("ApplicationConfiguration"));
 
+            InitAppConfig(services);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,10 +75,10 @@ namespace WebApplication1
                 app.UseHsts();
             }
 
-            /*DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
             defaultFilesOptions.DefaultFileNames.Clear();
-            defaultFilesOptions.DefaultFileNames.Add("Index.html");
-            app.UseDefaultFiles(defaultFilesOptions);    */        
+            defaultFilesOptions.DefaultFileNames.Add("/wwwroot/Views/Index.html");
+            app.UseDefaultFiles(defaultFilesOptions);           
 
             app.UseHttpsRedirection();
             //app.UseMvc();
@@ -107,7 +109,32 @@ namespace WebApplication1
             });
 
         }
-    }
+
+        /// <summary>
+        /// 初始化配置
+        /// </summary>
+        /// <param name="services"></param>
+        private void InitAppConfig(IServiceCollection services)
+        {
+            /*var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile("Datas/Config/SiteConfig.json")
+                .AddJsonFile("Datas/Config/Home/NavBarMenus.json")
+                .AddJsonFile("Datas/Config/Home/MyProfile.json")
+                .AddJsonFile("Datas/Config/Home/MyRequest.json")
+                .AddJsonFile("Datas/Config/BaiduAnalysis/VisitDistrictRequest.json");
+
+            var config = builder.Build();
+
+            services.Configure<SiteConfig>(config.GetSection("SiteConfig"));
+            services.Configure<NavBarMenus>(config.GetSection("NavBarMenus"));
+            services.Configure<PrivateInfo>(config.GetSection("PrivateInfo"));
+            services.Configure<MyProfile>(config.GetSection("MyProfile"));
+            services.Configure<MyRequest>(config.GetSection("MyRequest"));
+            services.Configure<VisitDistrictRequest>(config.GetSection("VisitDistrictRequest"));*/
+        }
+    }    
 
     /// <summary>
     /// 添加Token参数

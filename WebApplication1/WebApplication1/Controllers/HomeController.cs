@@ -12,6 +12,7 @@ using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Cors;
 
 namespace WebApplication1.Controllers
 {
@@ -67,8 +68,9 @@ namespace WebApplication1.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public string GetProductList(int pageIndex,int pageSize, string callback)
-        {           
+        [EnableCors("CorsSample")]
+        public OkObjectResult GetProductList(int pageIndex, int pageSize, string callback)
+        {
             var sql = string.Format(@"select top {0} * from(select  ROW_NUMBER() OVER (ORDER BY pid desc) AS RowNumber,* from SmartPig_products)t
 where t.RowNumber >{1}", pageSize, (pageIndex - 1) * pageSize);
             SqlParameter[] parm = {
@@ -76,7 +78,17 @@ where t.RowNumber >{1}", pageSize, (pageIndex - 1) * pageSize);
             };
             DataTable dt = SqlHelper.GetTable(CommandType.Text, sql, parm);
             //DataTable dt = dtConnection[0];
-            return callback+"(" + JsonConvert.SerializeObject(dt) + ")";
+            //return callback+"(" + JsonConvert.SerializeObject(dt) + ")";
+            //return JsonConvert.SerializeObject(dt);
+            return Ok(dt);
+        }
+
+        [HttpPost]
+        [EnableCors("CorsSample")]
+        public string Po([FromQuery]string a)
+        {
+            //Request.QueryString.Value;
+            return a;
         }
     }
 }

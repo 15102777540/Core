@@ -16,8 +16,8 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "WebApplication1": {
+    }
+    /*"WebApplication1": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "Views/Index.html",
@@ -25,6 +25,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    }
+    }*/
   }
 }

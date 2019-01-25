@@ -61,6 +61,37 @@ namespace WebApplication1
 
             InitAppConfig(services);
 
+            //添加cors 服务
+
+            services.AddCors(options =>        
+                                    options.AddPolicy("CorsSample", p => p.WithOrigins("http://192.168.1.105:8001")
+           .AllowAnyMethod().AllowAnyHeader()));
+
+            //配置跨域处理
+            /*services.AddCors(options =>
+            {
+                options.AddPolicy("any", builder =>
+                {
+                    builder.AllowAnyOrigin() //允许任何来源的主机访问
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();//指定处理cookie
+                });
+            });*/
+
+            // Add framework services.
+            /*services.AddMvc()
+                //全局配置Json序列化处理
+                .AddJsonOptions(options =>
+                {
+            //忽略循环引用
+            options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            //不使用驼峰样式的key
+            options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+            //设置时间格式
+            options.SerializerSettings.DateFormatString = "yyyy-MM-dd";
+                });*/
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,8 +112,9 @@ namespace WebApplication1
             app.UseDefaultFiles(defaultFilesOptions);           
 
             app.UseHttpsRedirection();
-            //app.UseMvc();
-
+            //app.UseMvc();            
+            //配置Cors
+            app.UseCors("CorsSample");
             //注册路由api地址
             app.UseMvc(routes =>
             {

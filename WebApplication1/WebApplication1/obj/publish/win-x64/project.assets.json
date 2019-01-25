@@ -17627,6 +17627,7 @@
       "Library.Common >= 1.0.0",
       "Library.Model >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.6",
+      "Microsoft.AspNetCore.Cors >= 2.1.1",
       "Microsoft.Extensions.Configuration.Json >= 2.1.1",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.6",
@@ -17688,6 +17689,10 @@
             "target": "Package",
             "version": "[2.1.6, )",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.Cors": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "Microsoft.Extensions.Configuration.Json": {
             "target": "Package",
